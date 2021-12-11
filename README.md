@@ -2,6 +2,10 @@
 
 <!-- ![Thumbnail](/image/thumbnail-web-sherly-daeng-menikah.png) -->
 
+# Short link
+
+- https://bit.ly/31FPvMo
+
 # Section/Feature
 
 - Main Info
