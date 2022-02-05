@@ -1,4 +1,7 @@
 // Get that hamburger menu cookin' //
+var modal = document.getElementById("modalWeddingGift");
+var containerGallery = document.getElementById("containerGallery")
+var containerClosing = document.getElementById("containerClosing")
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get all "navbar-burger" elements
@@ -23,10 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // play music in background
-$(document).on('click', function () {
-  document.getElementById("my_audio").play();
-  console.log('Shaadi me zaroor aana');
-});
+var myAudio = document.getElementById("my_audio");
+// myAudio.autoplay = true;
+// myAudio.load();
+// myAudio.addEventListener("load", function () {
+//   myAudio.play();
+// }, true);
+function toggleAudio(value) {
+  return !value.checked ? myAudio.play() : myAudio.pause();
+}
+
 
 // Smooth Anchor Scrolling
 $(document).on("click", 'a[href^="#"]', function (event) {
@@ -61,3 +70,31 @@ $(window).load(function () {
   var Body = $("body");
   Body.addClass("preloader-site");
 });
+
+function openModal() {
+  containerGallery.className = 'container is-blurred'
+  containerClosing.className = 'container is-blurred'
+  modal.style.display = 'block'
+}
+
+function closeModal() {
+  modal.style.display = 'none'
+  containerGallery.className = 'container'
+  containerClosing.className = 'container'
+}
+
+function copyToClipboard(element) {
+  var value = element.innerText
+  var popup1 = document.getElementById("popupCopy1")
+  var popup2 = document.getElementById("popupCopy2")
+  element.id == 'ananda' ? popup1.classList.toggle("show") :
+    popup2.classList.toggle("show")
+
+  navigator.clipboard.writeText(value)
+    .then(() => {
+      console.log("Text copied to clipboard...")
+    })
+    .catch(err => {
+      console.log('Something went wrong', err);
+    })
+}
