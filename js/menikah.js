@@ -8,11 +8,16 @@ var myAudio = document.getElementById("my_audio");
 
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-toLabel.innerHTML = urlParams.get('to').toString()
+
+if (urlParams.get('to') != null) {
+  toLabel.innerHTML = urlParams.get('to')
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   //open welcome modal
-  welcomeModal.style.display = 'block'
+  if (urlParams.get('to') != null) {
+    welcomeModal.style.display = 'block'
+  }
 
   // Get all "navbar-burger" elements
   var $navbarBurgers = Array.prototype.slice.call(
