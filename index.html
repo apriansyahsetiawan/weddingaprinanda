@@ -169,8 +169,8 @@
     <div class="main-content">
     <!-- Begin regular-section-->
     <section class="section-dark" style="padding-bottom: 0%;">
-      <div data-aos="fade-up" data-aos-easing="linear" class="card-content has-text-centered has-vertically-aligned-content">
-        <img src="./image/bouquet.png" style="width: 65px; height: 65px; margin-bottom: 20px;">
+      <img src="./image/galeri/adat-3.jpg" style="margin-bottom: 5%;" data-aos="fade-up" data-aos-easing="linear" >
+      <div data-aos="fade-up" data-aos-easing="linear" class="has-text-centered has-vertically-aligned-content">
         <h1 style="margin-bottom: 20px; font-size: 0.8rem;">
           “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“
         </h1>
@@ -342,9 +342,9 @@
           </div>
           <!-- IMAGES -->
             <div class="space40px"></div>
-            
+
             <!-- <video controls>
-              <source src="./video/prewed.mp4" type="video/mp4" >
+              <source src="" >
             </video> -->
 
             <div class="space40px"></div>
@@ -400,7 +400,7 @@
 
               <div class="space40px"></div>
               <div id="buttonWeddingGift" onclick="openModal()" >
-                  <i class="circle fal fa-gift" style="width: 80px; height: 80px; padding: 20px;"></i>
+                  <i class="circle fal fa-gift" style="width: 80px; height: 80px; padding: 10px;"></i>
               </div>
 
               <div class="space40px"></div>
@@ -447,7 +447,7 @@
     </div>
     <!-- End Footer -->
 
-    <div id="modalWeddingGift" class="modal">
+    <div id="modalWeddingGift" class="modal" style="padding-top: 30%;">
       <i class="far fa-times" onclick="closeModal()" style="position: absolute; right: 12%; margin-top: 2%; z-index: 10;"></i>
       <div class="modal-content has-text-centered">
         <img src="./image/bni.png" class="has-text-centered" style="width: 50%;" >
@@ -464,6 +464,19 @@
           <p id="apri" >10100009962026</p>
           <i class="far fa-copy button-copy" onclick="copyToClipboard(apri)"></i>
           <span id="popupCopy2" class="popuptext">copied!</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="welcomeModal" class="modal has-text-centered" >
+      <div class="hero" style="height: 100%;">
+        <div class="container has-text-centered">
+          <h1 class="subtitle">The Wedding of</h1>
+          <h2 class="title">Ananda & Apriansyah</h2>
+          <h1 style="font-size: small;">Yth. kepada Bapak/Ibu/Saudara/i</h1>
+          <h1 id="to" style="font-weight: bold; font-size: medium;"></h1>
+          <h1 style="font-size: x-small; padding-left: 20px; padding-right: 20px;">Tanpa mengurangi rasa hormat, Kami turut mengundang Anda untuk hadir pada acara pernikahan Kami.</h1>
+          <button style="margin-top: 10%; padding: 8px; background-color: #bf7877; border: 0ch; border-radius: 5px; color: white;" onclick="closeWelcomeModal()"><i class="far fa-envelope-open"></i> Buka Undangan</button>
         </div>
       </div>
     </div>

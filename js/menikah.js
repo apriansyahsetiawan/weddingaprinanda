@@ -1,9 +1,19 @@
 // Get that hamburger menu cookin' //
 var modal = document.getElementById("modalWeddingGift");
+var welcomeModal = document.getElementById("welcomeModal");
 var containerGallery = document.getElementById("containerGallery")
 var containerClosing = document.getElementById("containerClosing")
+var toLabel = document.getElementById('to')
+var myAudio = document.getElementById("my_audio");
+
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
+toLabel.innerHTML = urlParams.get('to').toString()
 
 document.addEventListener("DOMContentLoaded", function () {
+  //open welcome modal
+  welcomeModal.style.display = 'block'
+
   // Get all "navbar-burger" elements
   var $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
@@ -26,16 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // play music in background
-var myAudio = document.getElementById("my_audio");
-// myAudio.autoplay = true;
-// myAudio.load();
-// myAudio.addEventListener("load", function () {
-//   myAudio.play();
-// }, true);
 function toggleAudio(value) {
   return !value.checked ? myAudio.play() : myAudio.pause();
 }
-
 
 // Smooth Anchor Scrolling
 $(document).on("click", 'a[href^="#"]', function (event) {
@@ -81,6 +84,11 @@ function closeModal() {
   modal.style.display = 'none'
   containerGallery.className = 'container'
   containerClosing.className = 'container'
+}
+
+function closeWelcomeModal() {
+  welcomeModal.style.display = 'none'
+  myAudio.play()
 }
 
 function copyToClipboard(element) {
