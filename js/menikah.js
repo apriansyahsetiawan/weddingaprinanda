@@ -3,7 +3,9 @@ var modal = document.getElementById("modalWeddingGift");
 var welcomeModal = document.getElementById("welcomeModal");
 var containerGallery = document.getElementById("containerGallery")
 var containerClosing = document.getElementById("containerClosing")
+var ythLabel = document.getElementById('yth')
 var toLabel = document.getElementById('to')
+var inviteLabel = document.getElementById('invite')
 var myAudio = document.getElementById("my_audio");
 
 const queryString = window.location.search
@@ -11,13 +13,16 @@ const urlParams = new URLSearchParams(queryString)
 
 if (urlParams.get('to') != null) {
   toLabel.innerHTML = urlParams.get('to')
+} else {
+  ythLabel.innerHTML = ""
+  inviteLabel.innerHTML = ""
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   //open welcome modal
-  if (urlParams.get('to') != null) {
-    welcomeModal.style.display = 'block'
-  }
+  welcomeModal.style.display = 'block'
+  // if (urlParams.get('to') != null) {
+  // }
 
   // Get all "navbar-burger" elements
   var $navbarBurgers = Array.prototype.slice.call(

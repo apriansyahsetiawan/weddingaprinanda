@@ -780,6 +780,7 @@ body.preloader-site {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   border-radius: 50%;
   box-shadow: 2px 2px 8px #bc8887;
 }
